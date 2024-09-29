@@ -29,6 +29,12 @@ body {
     cursor: default;
 }
 
+.collapse .btn-dangerous:hover {
+    color: #fff;
+    background-color: #b93131 ;
+}
+
+
 .navbar .navbar-nav .information:hover {
     color: #092032 !important;
 }
@@ -66,9 +72,14 @@ body {
 }
 
 .collapse .btn-dangerous {
-    background-color: rgb(255, 0, 0) !important;
+    background-color: #ff0000 !important;
     color: #ffff !important;
     width: 200px;
+}
+
+.collapse .btn-dangerous:hover {
+    background-color: #e20a0a !important;
+    color: #fff !important;
 }
 
 /*SECTION UN */
@@ -82,13 +93,22 @@ body {
 }
 
 .commandes .btn-danger {
-    background-color: rgb(255, 0, 0) !important;
+    background-color: #ff0000 !important;
     color: #ffff;
     width: 19rem;
 }
 
+.commandes .btn-danger:hover {
+    background-color: #e20a0a !important;
+    color: #fff !important;
+}
+
 .commandes .btn-primary {
     width: 19rem;
+}
+
+.commandes .btn-primary:hover {
+    background-color: rgba(0, 0, 255, 0.918)!important;
 }
 
 .little-section {
@@ -143,8 +163,23 @@ body {
 }
 
 .section-quatre button {
-    background-color: red;
-    color: #ffff;
+    background-color: #ff0000 !important;
+    color: #ffff !important;
+}
+
+.section-quatre button:hover {
+    background-color: #e20a0a !important;
+    color: #fff !important;
+}
+
+.section-trois .btn {
+    color: #fff !important;
+    background-color: #ff0000;
+}
+
+.section-trois .btn:hover {
+    color: #ffff !important;
+    background-color: #e20a0a !important;
 }
 
 /*SECTION cINQ*/

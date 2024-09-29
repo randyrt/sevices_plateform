@@ -26,7 +26,7 @@ class ClientAddEmailController extends Controller
 
         $client->save();
 
-        return back()->with('success', 'Votre mail a été bien envoyé').'#success-message';
+        return back()->with('success', 'Félicitation, Votre mail a été bien envoyé').'#success-message';
 
     }
 }

@@ -2,21 +2,32 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\View\View;
+
 use App\Models\Client;
+use Illuminate\View\View;
 use App\Http\Requests\ClientRequest;
+
 
 
 class ClientAddEmailController extends Controller
 {   
-
+     /**
+      * Summary of index
+      * @return \Illuminate\View\View
+      */
      public function index(): View
     {
         return view('home');
     }
 
 
-    public function create (ClientRequest $request){
+    /**
+     * Summary of insert
+     * @param \App\Http\Requests\ClientRequest $request
+     * @return mixed|\Illuminate\Http\RedirectResponse
+     */
+    public function insert(ClientRequest $request)
+    {
 
         $request->validated();
 
@@ -26,7 +37,9 @@ class ClientAddEmailController extends Controller
 
         $client->save();
 
-        return back()->with('success', 'Félicitation, Votre mail a été bien envoyé').'#success-message';
+       return redirect()->to(url()->previous() . '#message-alert')
+       ->with('success', 'Félicitation, votre email a été envoyé avec succès !');
 
     }
 }
+

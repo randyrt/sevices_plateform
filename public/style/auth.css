@@ -1,0 +1,11 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-light {
+    border-radius: 20px;
+    padding: 20px;
+}

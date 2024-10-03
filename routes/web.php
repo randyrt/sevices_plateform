@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ClientAddEmailController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,7 +15,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [ClientAddEmailController::class, 'index'])->name('home');
-Route::post('/', [ClientAddEmailController::class, 'create'])->name('home');
+/**ESPACE ADMINISTRATION */
+Route::get('/register', [AuthController::class, 'register']);
+Route::post('/register', [AuthController::class, 'doregister'])->name('register');
+
+Route::get('/login', [AuthController::class, 'login']);
+Route::post('/login', [AuthController::class, 'dologin'])->name('login');
+
+
+
+
+Route::get('/', [ClientAddEmailController::class, 'index']);
+Route::post('/', [ClientAddEmailController::class, 'insert'])->name('home');
+
 
 

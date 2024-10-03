@@ -1,6 +1,7 @@
 @extends('base');
-@section('content')
 
+
+@section('content')
     <!--SECTION 1-->
     <section class="section-un">
       <div class="container-fluid ">
@@ -68,43 +69,43 @@
       </div>
     </section>
 
-    <section class="p-3 section-trois">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="mx-auto text-center col-lg-6 col-md-8 col-sm-12">
-        <h5 class="text-uppercase text-primary">Soyez le premier à profiter de notre service</h5>
-        <h2 class="my-3">Restez connecté pour notre lancement.</h2>
-        <p class="mb-4">Inscrivez-vous dès maintenant pour ne pas manquer le lancement de nos services.</p>
+    <section class="p-3 section-trois" id="message-alert">
+      <div class="container" id="#error-message">
+        <div class="row justify-content-center">
+          <div class="mx-auto text-center col-lg-6 col-md-8 col-sm-12">
+            <h5 class="text-uppercase text-primary">Soyez le premier à profiter de notre service</h5>
+            <h2 class="my-3">Restez connecté pour notre lancement.</h2>
+            <p class="mb-4">Inscrivez-vous dès maintenant pour ne pas manquer le lancement de nos services.</p>
 
-        <form action="{{ url()->previous() }}" class="d-flex justify-content-center" method="POST">
-          @csrf
-          @method('POST')
+            <form action="{{ route('home') }}" class="d-flex justify-content-center" method="POST">
+              @csrf
+              @method('POST')
 
-          <div class="input-group">
-            <input type="email" class="form-control me-2 email-input @error('email') is-invalid @enderror" name="email"
-             placeholder="Entrez votre adresse email" required>
-            <button type="submit" class="btn">Envoyer</button>
+              <div class="input-group">
+                <input type="email" class="form-control me-2 email-input @error('email') is-invalid @enderror" name="email"
+                placeholder="Entrez votre adresse email" required>
+                <button type="submit" class="btn">Envoyer</button>
+              </div>
+            </form>
+
+            <!-- Affichage du message d'erreur lié à l'email -->
+            @error('email')
+              <div class="w-100">
+                <small class="mb-3 text-danger text-start d-block">{{ $message }}</small>
+              </div>
+            @enderror
+
+            <!-- Affichage du message de succès -->
+            @if(session('success'))
+              <div class="mt-3 alert alert-success">
+                {{ session('success') }}
+              </div>
+            @endif
+
+            <p class="mb-3 text-small">Vous pouvez vous désinscrire sur cette <a href="#">page</a></p>
           </div>
-        </form>
-
-        <!-- Affichage du message d'erreur lié à l'email -->
-        @error('email')
-          <div class="w-100" id="success-message">
-            <small class="mb-3 text-danger text-start d-block">{{ $message }}</small>
-          </div>
-        @enderror
-
-        <!-- Affichage du message de succès -->
-        @if(session('success'))
-          <div class="mt-3 alert alert-success">
-            {{ session('success') }}
-          </div>
-        @endif
-
-        <p class="mb-3 text-small">Vous pouvez vous désinscrire sur cette <a href="#">page</a></p>
+        </div>
       </div>
-    </div>
-  </div>
 </section>
 
 
@@ -228,5 +229,4 @@
         </div>
       </div>
     </section>
-
- @endsection
+@endsection

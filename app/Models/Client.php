@@ -7,9 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Client extends Model
 {   
+    use HasFactory;
+    
     protected $fillable = [
         'email'
     ];
     
-    use HasFactory;
+   
 }

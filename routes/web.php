@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\AuthController;
-use App\Http\Controllers\ClientAddEmailController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ClientAddEmailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,11 +17,28 @@ use Illuminate\Support\Facades\Route;
 */
 
 /**ESPACE ADMINISTRATION */
-Route::get('/register', [AuthController::class, 'register']);
-Route::post('/register', [AuthController::class, 'doregister'])->name('register');
 
-Route::get('/login', [AuthController::class, 'login']);
-Route::post('/login', [AuthController::class, 'dologin'])->name('login');
+
+Route::middleware(\App\Http\Middleware\RedirectIfAuthenticated::class)->group(function () {
+
+    Route::get('/register', [AuthController::class, 'showRegister']);
+    Route::post('/register', [AuthController::class, 'doRegister'])->name('register');
+
+    Route::get('/login', [AuthController::class, 'showLogin']);
+    Route::post('/login', [AuthController::class, 'doLogin'])->name('login');
+
+});
+
+Route::middleware(\App\Http\Middleware\Authenticate::class)->group(function () {
+
+    Route::get('/admin/dashbord', [AdminController::class, 'showDashbord'])->name('admin.dashbord');
+    Route::get('/admin/dashbord', [AdminController::class, 'listClientEmail'])->name('admin.dashbord');
+
+    Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+});
+
+
 
 Route::get('/', [ClientAddEmailController::class, 'index']);
 Route::post('/', [ClientAddEmailController::class, 'insert'])->name('home');

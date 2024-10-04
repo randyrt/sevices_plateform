@@ -2,15 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\LoginRequest;
 use App\Models\User;
+use Illuminate\Http\Request;
+use App\Http\Requests\LoginRequest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use App\Http\Requests\RegisterRequest;
 
+
 class AuthController extends Controller
 {
-    public function register ()
+    public function showRegister ()
     {
         return view('auth.register');
     }
@@ -33,27 +35,38 @@ class AuthController extends Controller
     }   
 
 
-    public function login()
+    public function showLogin()
     {
         return view('auth.login');
     }
 
-    public function dologin(LoginRequest $request)
+    public function doLogin(LoginRequest $request)
     {
-        dd($request);
-        
-        $credentials =  $request->validated();
+       
+         $credentials =  $request->validated();
 
 
         if(Auth::attempt($credentials, (bool) $request->remember)){
             $request->session()->regenerate();
-            return redirect()->intended('dashboard');
+            return redirect()->route('admin.dashbord');
         }
 
         return back()->withErrors([
             'email' => 'les identifiants fournis sont incorrects',
         ]);
     }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return redirect()->route('login');
+    }
 }
+
 
     

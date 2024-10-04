@@ -3,9 +3,7 @@
 @section('inscription')
 
 @section('content')
-
-
-  <div class="container mt-5 bg-light">
+<div class="container mt-5 bg-info">
     <h1 class="text-center text-uppercase display-5">Inscription</h1>
     <div class="row justify-content-center">
       <div class="col-md-6">
@@ -23,7 +21,6 @@
       </div>
     </div>
   </div>
-
 @endsection
 
  

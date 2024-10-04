@@ -11,7 +11,13 @@ class checkbox extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct(public string $label = 'Se souvenir de moi', public string $type = 'checkbox')
+    public function __construct(
+        public string $label = 'Se souvenir de moi',
+        public string $type = 'checkbox', 
+        public ?string $name = null,
+        public ?string $class = "form-check-input",
+        public ?string $id = null
+    )
     {
         //
     }

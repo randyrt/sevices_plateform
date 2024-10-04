@@ -41,12 +41,16 @@ class AuthController extends Controller
 
     public function dologin(LoginRequest $request)
     {
-        if(Auth::attempt(['email' => $request->email, 'password' => $request->password])){
-            return redirect()->intended('dashbord');
+        $credentials =  $request->validated();
+
+
+        if(Auth::attempt($credentials, (bool) $request->remember)){
+            $request->session()->regenerate();
+            return redirect()->intended('dashboard');
         }
 
         return back()->withErrors([
-            'email' => "Les identifians fournis sont incorrects",
+            'email' => 'les identifiants fournis sont incorrects',
         ]);
     }
 }

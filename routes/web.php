@@ -22,9 +22,6 @@ Route::post('/register', [AuthController::class, 'doregister'])->name('register'
 Route::get('/login', [AuthController::class, 'login']);
 Route::post('/login', [AuthController::class, 'dologin'])->name('login');
 
-
-
-
 Route::get('/', [ClientAddEmailController::class, 'index']);
 Route::post('/', [ClientAddEmailController::class, 'insert'])->name('home');
 

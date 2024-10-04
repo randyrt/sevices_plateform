@@ -4,12 +4,21 @@
 
 body {
     line-height: 1.4;
+    font-family: "Barlow";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/barlow/v12/7cHqv4kjgoGqM7E3_-gs51os.woff2)
+        format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+        U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122,
+        U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    color: rgb(30, 45, 60);
 }
 
-.navbar-toggler-icon button{
-  background-color: #000 !important;
+.navbar-toggler-icon button {
+    background-color: #000 !important;
 }
-
 
 /* NAVBAR */
 .navbar {
@@ -31,9 +40,8 @@ body {
 
 .collapse .btn-dangerous:hover {
     color: #fff;
-    background-color: #b93131 ;
+    background-color: #b93131;
 }
-
 
 .navbar .navbar-nav .information:hover {
     color: #092032 !important;
@@ -108,7 +116,7 @@ body {
 }
 
 .commandes .btn-primary:hover {
-    background-color: rgba(0, 0, 255, 0.918)!important;
+    background-color: rgba(0, 0, 255, 0.918) !important;
 }
 
 .little-section {

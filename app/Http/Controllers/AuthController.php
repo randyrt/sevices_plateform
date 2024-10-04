@@ -19,8 +19,7 @@ class AuthController extends Controller
     public function doRegister(RegisterRequest $request)
     {
 
-      
-        $request->validated();
+       $request->validated();
 
         $user = User::create([
             "name" => $request->name,
@@ -41,6 +40,8 @@ class AuthController extends Controller
 
     public function dologin(LoginRequest $request)
     {
+        dd($request);
+        
         $credentials =  $request->validated();
 
 

@@ -9,6 +9,7 @@
       <div class="col-md-6">
         <form action="{{ route('login') }}" method="POST">
           @csrf
+          
           <x-input label="E-mail"  id="email" type="email" name="email"/>
           <x-input label="Mot de passe" id="passwordInput1" type="password" name="password"/>
           <x-checkbox id="toggleCheckbox" label="montrer/cacher mot de passe" />

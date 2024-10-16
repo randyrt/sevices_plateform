@@ -7,7 +7,7 @@
       <div class="container-fluid ">
         <div class="row align-items-center justify-content-center commandes">
           <div class="col-lg-6">
-            <img class="img-fluid" src="./Images/container.png" alt="">
+            <img class="img-fluid" src="{{asset('images/containerimages.png')}}" alt="image des containers">
           </div>
           <div class="ml-auto col-lg-6 align-items-center">
             <h1>Commander vos articles </h1>
@@ -49,7 +49,7 @@
         <div class="mt-3 row align-items-center">
           <div class="mt-3 col-md-3">
             <div class="px-3">
-              <img class="img-fluid" src="./images/art.png" alt="">
+              <img class="img-fluid" src="{{ asset('images/art.png') }}" alt="">
             </div>
           </div>
           <div class="col-md-8">
@@ -114,7 +114,7 @@
       <div class="text-white container-fluid bg-primary">
         <div class="row align-items-center">
           <div class="p-0 col-md-6 order-md-2 d-flex justify-content-center align-items-center">
-            <img class="img-fluid" src="./images/port.png" alt="Image descriptive">
+            <img class="img-fluid" src="{{ asset('images/port.png') }}" alt="Image descriptive">
           </div>
           <div class="ml-2 p-lg-5 col-md-6 d-flex flex-column justify-content-between align-items-start text-start">
             <h1 class="display-8 grandTitre">Confiez l'achat de vos produits à des

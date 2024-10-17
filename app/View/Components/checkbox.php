@@ -16,7 +16,7 @@ class checkbox extends Component
         public string $type = 'checkbox', 
         public string $name = 'checkbox',
         public string $class = 'form-check-input',  
-        public?string $id = null
+        public ?string $id = null
     )
     {
         $this->id ??= 'checkbox_' . uniqid(); 

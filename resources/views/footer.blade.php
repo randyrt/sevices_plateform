@@ -17,7 +17,7 @@
               <h5 class="py-3 fw-bolder">À propos de Colinaka</h5>
               <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dictum aliquet accumsan
                 porta lectus
-                ridiculus in mattis. Netus sodales in volutpat ullamcorper amet adipiscing fermentum.</p>
+                ridiculus in mattis. Netus sodales in volutpat ullamcorper amet adipiscing fermentummmm.</p>
               <ul class="py-5 mt-5 list-inline">
                 <li class="list-inline-item"><a href="#"><i class="bi bi-twitter text-dark last-li"></i></a></li>
                 <li class="list-inline-item"><a href="#"><i class="bi bi-facebook text-dark last-li"></i></a></li>

@@ -9,7 +9,7 @@
           <div class="col-lg-6">
             <img class="img-fluid" src="{{asset('images/containerimages.png')}}" alt="image des containers">
           </div>
-          <div class="ml-auto col-lg-6 align-items-center">
+          <div class="mt-5 ml-auto col-lg-6 align-items-center">
             <h1>Commander vos articles </h1>
             <h1>en provenance de Chine</h1>
             <h1>en toute simplicité.</h1>

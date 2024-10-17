@@ -14,8 +14,8 @@ class checkbox extends Component
     public function __construct(
         public string $label = 'Se souvenir de moi',
         public string $type = 'checkbox', 
-        public string $name = 'checkbox',
-        public string $class = 'form-check-input',  
+        public string $name = 'remember',
+        public string $class = 'form-checkbox',  
         public ?string $id = null
     )
     {

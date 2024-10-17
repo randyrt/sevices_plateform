@@ -23,8 +23,8 @@ class Input extends Component
     {
         
         $this->id = $this->id ?? 'input_' . uniqid(); 
-        $this->class = $this->class ?? 'form-control'; 
-        $this->placeholder = $this->placeholder ?? 'Entrez votre ' . strtolower($label); 
+        $this->class = $this->class ?? 'form-control'; // Classe par défaut
+        $this->placeholder = $this->placeholder ?? 'Entrez votre ' . strtolower($label); // Placeholder par défaut basé sur le label
     }
 
     /** 

@@ -20,7 +20,7 @@
 
 
  
-{{-- script for the type password ?? text --}}
+{{-- script for the type password ?? text 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const passwordInputs = document.querySelectorAll('#passwordInput1, #passwordInput2, #passwordInput3');
@@ -33,6 +33,7 @@
         });
     });
 </script>
+--}}
 
 
 

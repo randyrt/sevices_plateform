@@ -15,11 +15,13 @@ class checkbox extends Component
         public string $label = 'Se souvenir de moi',
         public string $type = 'checkbox', 
         public ?string $name = null,
-        public ?string $class = null,
+        public ?string $class = null,  
         public ?string $id = null
     )
     {
-        //
+      
+        $this->class = $this->class ?? 'form-check-input'; 
+        $this->id = $this->id ?? 'checkbox_' . uniqid(); 
     }
 
     /**

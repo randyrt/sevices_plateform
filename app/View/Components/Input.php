@@ -16,13 +16,15 @@ class Input extends Component
         public string $label,
         public ?string $id = null,
         public ?string $for = null,
-      
         public string $type = 'text',
         public ?string $class = null,
         public ?string $placeholder = null
     )
     {
-      
+        
+        $this->id = $this->id ?? 'input_' . uniqid(); 
+        $this->class = $this->class ?? 'form-control'; 
+        $this->placeholder = $this->placeholder ?? 'Entrez votre ' . strtolower($label); 
     }
 
     /** 

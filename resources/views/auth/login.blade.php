@@ -12,7 +12,7 @@
           
           <x-input label="E-mail"  id="email" type="email" name="email"/>
           <x-input label="Mot de passe" id="passwordInput1" type="password" name="password"/>
-          <x-checkbox id="toggleCheckbox" label="Montrer/cacher mot de passe" />
+          <x-checkbox id="toggleCheckbox"  label="Montrer/cacher mot de passe" />
           <x-checkbox label="Se souvenir de moi" />
           <button type="submit" class="w-20 btn btn-primary">Se connecter</button>
           <p class="mt-3">Pas encore de compte, <a href="{{ route('register') }}" class="text-primary">S'inscrire</a> </p>
